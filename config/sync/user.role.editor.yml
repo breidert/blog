@@ -1,0 +1,23 @@
+uuid: cf6b8cfa-6a9a-4807-9984-4847ba8c4dba
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create page content'
+  - 'delete any article content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete page revisions'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'view article revisions'
+  - 'view page revisions'
