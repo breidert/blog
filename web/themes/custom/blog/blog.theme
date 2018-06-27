@@ -19,3 +19,12 @@
     $variables['content']['message'] = 'Hello World';
   }
 }*/
+
+/**
+  * Preprocess page
+  */
+/*function blog_preprocess_page(&$variables) {
+  if(isset($variables['node'])) {
+    drupal_set_message('Bundle: ' . $variables['node']->bundle());
+  }
+}*/
