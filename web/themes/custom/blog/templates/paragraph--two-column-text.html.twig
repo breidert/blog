@@ -60,6 +60,10 @@
       {{ content.field_second_column }}
     </div>
   </div>
+  {#
+  {{ attribute(content, 'field_first_column') }}
+  {{ content['field_second_column'] }}
+  #
 {% endblock paragraph %}
 {#
 {{ dump(content) }}
