@@ -6,3 +6,16 @@
  *
  * Place your custom PHP code in this file.
  */
+
+ /**
+  * Preprocess two column text paragraph
+  */
+/*function blog_preprocess_paragraph(&$variables) {
+  drupal_set_message(print_r(array_keys($variables), true));
+  drupal_set_message(print_r(array_keys($variables['content']), true));
+  $type = $variables['paragraph']->getType();
+  drupal_set_message($type);
+  if($type == 'two_column_text') {
+    $variables['content']['message'] = 'Hello World';
+  }
+}*/
