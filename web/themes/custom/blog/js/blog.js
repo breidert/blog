@@ -6,4 +6,9 @@
       });
     }
   };
+  Drupal.behaviors.slick = {
+    attach: function (context, settings) {
+      $(".view-latest-articles.view-display-id-page_1 .view-content", context).once('slick').slick();
+    }
+  };
 })(jQuery, Drupal);

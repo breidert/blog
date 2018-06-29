@@ -8,23 +8,80 @@
  */
 
  /**
-  * Preprocess two column text paragraph
+  * Preprocess image paragraph
   */
-/*function blog_preprocess_paragraph(&$variables) {
-  drupal_set_message(print_r(array_keys($variables), true));
-  drupal_set_message(print_r(array_keys($variables['content']), true));
+function blog_preprocess_paragraph(&$variables) {
   $type = $variables['paragraph']->getType();
-  drupal_set_message($type);
-  if($type == 'two_column_text') {
-    $variables['content']['message'] = 'Hello World';
+  if($type == 'image') {
+    $col_style = 'col-md-12';
+    $number_of_columns = $variables['paragraph']->field_number_columns->value;
+    switch($number_of_columns) {
+      case 2:
+        $col_style = 'col-md-6';
+        break;
+      case 3:
+        $col_style = 'col-md-4';
+        break;
+      case 4: 
+        $col_style = 'col-md-3';
+        break;
+    }
+    $variables['content']['colStyle'] = $col_style;
   }
-}*/
+}
 
 /**
   * Preprocess page
   */
-/*function blog_preprocess_page(&$variables) {
+function blog_preprocess_page(&$variables) {
   if(isset($variables['node'])) {
-    drupal_set_message('Bundle: ' . $variables['node']->bundle());
+    //drupal_set_message('The bundle: ' . $variables['node']->bundle());
   }
-}*/
+}
+
+/**
+  * Preprocess field
+  */
+function blog_preprocess_field(&$variables) {
+  //drupal_set_message(print_r(array_keys($variables), true));
+  //drupal_set_message(print_r(array_keys($variables['attributes']), true));
+}
+
+
+/**
+  * Preprocess block
+  */
+function blog_preprocess_block(&$variables) {
+  //drupal_set_message(print_r(array_keys($variables), true));
+  //drupal_set_message(print_r(array_keys($variables['attributes']), true));
+  //drupal_set_message(print_r(array_keys($variables['content']), true));
+  if(isset($variables['content']['#view_id'])) {
+    $view_id = $variables['content']['#view_id'];
+    $view_display_plugin_id = $variables['content']['#view_display_plugin_id'];
+    //drupal_set_message("View $view_id / $view_display_plugin_id");
+  }
+}
+
+/**
+  * Preprocess view
+  */
+function blog_preprocess_views_view(&$variables) {
+  /*$id = $variables['id'];
+  $display_id = $variables['display_id'];
+  drupal_set_message("View with $id / $display_id");
+  if($id == 'latest_articles' && $display_id == 'block_1') {
+    $variables['content']['slick'] = "data-slick='{\"slidesToShow\": 4, \"slidesToScroll\": 4}'";
+  }
+  else {
+    $variables['content']['slick'] = '';
+  }
+  //drupal_set_message(print_r(array_keys($variables), true));
+  //drupal_set_message(print_r(array_keys($variables['attributes']), true));
+  //drupal_set_message(print_r(array_keys($variables['content']), true));
+  //if(isset($variables['content']['#view_id'])) {
+  //  $view_id = $variables['content']['#view_id'];
+  //  $view_display_plugin_id = $variables['content']['#view_display_plugin_id'];
+  //  drupal_set_message("View $view_id / $view_display_plugin_id");
+  //}
+  */
+}
