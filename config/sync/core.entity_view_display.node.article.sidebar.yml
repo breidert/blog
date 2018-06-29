@@ -1,0 +1,46 @@
+uuid: 861f69cf-b978-4f9b-a586-54f01b3ee991
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_content
+    - field.field.node.article.field_highlight
+    - field.field.node.article.field_image
+    - field.field.node.article.field_preview_image
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_test
+    - field.field.node.article.field_text
+    - node.type.article
+    - responsive_image.styles.narrow
+  module:
+    - responsive_image
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.sidebar
+targetEntityType: node
+bundle: article
+mode: sidebar
+content:
+  field_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: narrow
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  comment: true
+  field_content: true
+  field_highlight: true
+  field_preview_image: true
+  field_tags: true
+  field_test: true
+  field_text: true
+  links: true

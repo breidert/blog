@@ -1,0 +1,22 @@
+uuid: c6d528fe-f87f-4253-bd50-fa33aa61a90d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - blog
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: blog_messages
+theme: blog
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 3a13ce15-d0e9-44a5-a1b8-a77d8ff30e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_columns
+    - paragraphs.paragraphs_type.image
+  module:
+    - options
+id: paragraph.image.field_number_columns
+field_name: field_number_columns
+entity_type: paragraph
+bundle: image
+label: 'Number of columns'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

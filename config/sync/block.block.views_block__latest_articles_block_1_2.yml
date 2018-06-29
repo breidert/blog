@@ -1,0 +1,31 @@
+uuid: 7ca50557-b9d3-40fc-86f5-bc813e2336b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_articles
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap
+id: views_block__latest_articles_block_1_2
+theme: bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_articles-block_1'
+settings:
+  id: 'views_block:latest_articles-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,20 @@
+uuid: c8905fb8-2057-4c69-ae78-9313bfd2eed7
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - blog
+id: userlogin
+theme: blog
+region: sidebar_second
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: '0'
+visibility: {  }

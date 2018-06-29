@@ -1,0 +1,11 @@
+uuid: e6cd5c26-7599-47e9-a4de-a36aad74ac29
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.max_650x650
+id: mini
+label: Mini
+image_style_mappings: {  }
+breakpoint_group: responsive_image
+fallback_image_style: max_650x650

@@ -1,0 +1,18 @@
+uuid: cb9c6685-1ce1-4165-b0ca-2c5b9f94a4e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_highlight
+field_name: field_highlight
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
