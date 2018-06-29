@@ -43,7 +43,8 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'row'
   ]
 %}
 {% block paragraph %}
@@ -54,6 +55,9 @@
   </div>#}
   {#
   <h2>{{ content.message }}</h2>
+  #}
+  {#
+  <div{{ attributes.addclass(classes) }}>
   #}
   <div class="row">
     <div class="col-md-6">
